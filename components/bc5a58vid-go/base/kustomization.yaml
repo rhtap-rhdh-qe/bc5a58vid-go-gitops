@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: bc5a58vid-go
+  janus-idp.io/tekton: bc5a58vid-go
+  backstage.io/kubernetes-id: bc5a58vid-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: bc5a58vid-go
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
